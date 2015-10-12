@@ -12,6 +12,7 @@
 		5698BAA91B8DD3C5008805E2 /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
 		5698BAAC1B8DD3DE008805E2 /* FURRExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */; };
 		5698BAAD1B8DD3F9008805E2 /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
+		DD6657D11BCC0CA600E5F7FA /* Array+FURRExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5698BA921B8DD347008805E2 /* FURRExtensions.h in Headers */,
+				DD6657D11BCC0CA600E5F7FA /* Array+FURRExtensions.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
