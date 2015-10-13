@@ -154,7 +154,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Routger Deecke";
+				ORGANIZATIONNAME = "Ruotger Deecke";
 				TargetAttributes = {
 					5698BA8D1B8DD347008805E2 = {
 						CreatedOnToolsVersion = 7.0;

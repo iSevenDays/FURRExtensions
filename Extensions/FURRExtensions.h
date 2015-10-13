@@ -3,7 +3,7 @@
 //  Extensions
 //
 //  Created by Deecke,Roddi on 26.08.15.
-//  Copyright © 2015 Routger Deecke. All rights reserved.
+//  Copyright © 2015 Ruotger Deecke. All rights reserved.
 //
 // TL/DR; BSD 2-clause license
 //
