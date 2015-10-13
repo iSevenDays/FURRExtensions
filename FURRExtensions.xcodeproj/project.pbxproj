@@ -116,7 +116,7 @@
 				5698BA8A1B8DD347008805E2 /* Frameworks */,
 				5698BA8B1B8DD347008805E2 /* Headers */,
 				5698BA8C1B8DD347008805E2 /* Resources */,
-				DD6657CD1BCBB57900E5F7FA /* ShellScript */,
+				DD6657CD1BCBB57900E5F7FA /* Run SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -134,6 +134,7 @@
 				5698BA941B8DD347008805E2 /* Sources */,
 				5698BA951B8DD347008805E2 /* Frameworks */,
 				5698BA961B8DD347008805E2 /* Resources */,
+				DD2E12BB1BCD000F00E5F7FA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -199,7 +200,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		DD6657CD1BCBB57900E5F7FA /* ShellScript */ = {
+		DD2E12BB1BCD000F00E5F7FA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -210,7 +211,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = /usr/local/bin/swiftlint;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed.  Skipping lint.\"\nfi";
+		};
+		DD6657CD1BCBB57900E5F7FA /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed.  Skipping lint.\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
