@@ -73,5 +73,30 @@ public extension Array {
 
         return (beforeArray,afterArray)
     }
+}
 
+public extension Array where Element: Equatable {
+
+    /// Warning this method takes time in the order of O(n^2) for the worst case (no dupes)
+    public func containsDuplicates() -> Bool {
+        for var i=0 ; i<self.count-1 ; i++ {
+            for var j=i+1 ; j<self.count; j++ {
+                if self[i] == self[j] {
+                    return true
+                }
+            }
+        }
+        return false
+    }
+
+
+}
+
+public extension Array where Element: Hashable {
+    /// This method is potentially faster than containsDuplicates() especially with bigger data sets but
+    /// will also need more memory.
+    public func containsDuplicatesFast() -> Bool {
+        let set: Set<Element> = Set(self)
+        return self.count != set.count
+    }
 }

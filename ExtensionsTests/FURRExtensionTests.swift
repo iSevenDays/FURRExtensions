@@ -92,4 +92,17 @@ class ExtensionTests: XCTestCase {
         XCTAssert(after == [])
     }
 
+    func testContainsDupes() {
+        XCTAssert(["a","a"].containsDuplicates() == true)
+        XCTAssert(["a","b","c"].containsDuplicates() == false)
+        XCTAssert(["a","b","c","c"].containsDuplicates() == true)
+    }
+
+    func testContainsDupesFast() {
+        XCTAssert(["a","a"].containsDuplicatesFast() == true)
+        XCTAssert(["a","b","c"].containsDuplicatesFast() == false)
+        XCTAssert(["a","b","c","c"].containsDuplicatesFast() == true)
+    }
+
+
 }
