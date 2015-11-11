@@ -53,7 +53,7 @@ public extension Array {
         return self[inIndex];
     }
 
-    public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>,Array<Element>) {
+    public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
         var beforeArray:Array<Element> = Array()
         var afterArray:Array<Element> = Array()
 
@@ -71,7 +71,7 @@ public extension Array {
             }
         }
 
-        return (beforeArray,afterArray)
+        return (beforeArray, afterArray)
     }
 }
 

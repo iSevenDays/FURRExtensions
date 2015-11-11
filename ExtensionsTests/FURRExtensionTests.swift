@@ -54,7 +54,7 @@ class ExtensionTests: XCTestCase {
 
     func testDivideUntilMiddle() {
         let array = ["a","b","c","d","e"]
-        let (before,after) = array.divideUntil { (inElement) -> Bool in
+        let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "c"
         }
 
@@ -64,7 +64,7 @@ class ExtensionTests: XCTestCase {
 
     func testDivideUntilFirst() {
         let array = ["a","b","c","d","e"]
-        let (before,after) = array.divideUntil { (inElement) -> Bool in
+        let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "a"
         }
 
@@ -74,7 +74,7 @@ class ExtensionTests: XCTestCase {
 
     func testDivideUntilLast() {
         let array = ["a","b","c","d","e"]
-        let (before,after) = array.divideUntil { (inElement) -> Bool in
+        let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "e"
         }
 
@@ -84,7 +84,7 @@ class ExtensionTests: XCTestCase {
 
     func testDivideUntilWithout() {
         let array = ["a","b","c","d","e"]
-        let (before,after) = array.divideUntil { (inElement) -> Bool in
+        let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "f"
         }
 
