@@ -13,6 +13,10 @@
 		5698BAAC1B8DD3DE008805E2 /* FURRExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */; };
 		5698BAAD1B8DD3F9008805E2 /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
 		DD6657D11BCC0CA600E5F7FA /* Array+FURRExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDAE95F61BFB0CDF00E5F7FA /* FURRExtensionsOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAE95F51BFB0CDF00E5F7FA /* FURRExtensionsOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDAE95FD1BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */; };
+		DDAE960A1BFB0D0A00E5F7FA /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
+		DDAE960B1BFB0D0D00E5F7FA /* FURRExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +26,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 5698BA8D1B8DD347008805E2;
 			remoteInfo = Extensions;
+		};
+		DDAE95FE1BFB0CDF00E5F7FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5698BA851B8DD347008805E2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DDAE95F21BFB0CDF00E5F7FA;
+			remoteInfo = FURRExtensionsOSX;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -34,6 +45,11 @@
 		5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+FURRExtensions.swift"; sourceTree = "<group>"; };
 		5698BAAA1B8DD3DD008805E2 /* ExtensionsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExtensionsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FURRExtensionTests.swift; sourceTree = "<group>"; };
+		DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FURRExtensionsOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAE95F51BFB0CDF00E5F7FA /* FURRExtensionsOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FURRExtensionsOSX.h; sourceTree = "<group>"; };
+		DDAE95F71BFB0CDF00E5F7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDAE95FC1BFB0CDF00E5F7FA /* FURRExtensionsOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FURRExtensionsOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDAE96031BFB0CDF00E5F7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +68,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDAE95EF1BFB0CDF00E5F7FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAE95F91BFB0CDF00E5F7FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAE95FD1BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -60,6 +91,8 @@
 			children = (
 				5698BA901B8DD347008805E2 /* Extensions */,
 				5698BA9C1B8DD347008805E2 /* ExtensionsTests */,
+				DDAE95F41BFB0CDF00E5F7FA /* FURRExtensionsOSX */,
+				DDAE96001BFB0CDF00E5F7FA /* FURRExtensionsOSXTests */,
 				5698BA8F1B8DD347008805E2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,6 +102,8 @@
 			children = (
 				5698BA8E1B8DD347008805E2 /* FURRExtensions.framework */,
 				5698BA981B8DD347008805E2 /* FURRExtensions.xctest */,
+				DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */,
+				DDAE95FC1BFB0CDF00E5F7FA /* FURRExtensionsOSXTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -93,6 +128,23 @@
 			path = ExtensionsTests;
 			sourceTree = "<group>";
 		};
+		DDAE95F41BFB0CDF00E5F7FA /* FURRExtensionsOSX */ = {
+			isa = PBXGroup;
+			children = (
+				DDAE95F51BFB0CDF00E5F7FA /* FURRExtensionsOSX.h */,
+				DDAE95F71BFB0CDF00E5F7FA /* Info.plist */,
+			);
+			path = FURRExtensionsOSX;
+			sourceTree = "<group>";
+		};
+		DDAE96001BFB0CDF00E5F7FA /* FURRExtensionsOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				DDAE96031BFB0CDF00E5F7FA /* Info.plist */,
+			);
+			path = FURRExtensionsOSXTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -102,6 +154,14 @@
 			files = (
 				5698BA921B8DD347008805E2 /* FURRExtensions.h in Headers */,
 				DD6657D11BCC0CA600E5F7FA /* Array+FURRExtensions.swift in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAE95F01BFB0CDF00E5F7FA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAE95F61BFB0CDF00E5F7FA /* FURRExtensionsOSX.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,13 +206,49 @@
 			productReference = 5698BA981B8DD347008805E2 /* FURRExtensions.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		DDAE95F21BFB0CDF00E5F7FA /* FURRExtensionsOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAE96041BFB0CDF00E5F7FA /* Build configuration list for PBXNativeTarget "FURRExtensionsOSX" */;
+			buildPhases = (
+				DDAE95EE1BFB0CDF00E5F7FA /* Sources */,
+				DDAE95EF1BFB0CDF00E5F7FA /* Frameworks */,
+				DDAE95F01BFB0CDF00E5F7FA /* Headers */,
+				DDAE95F11BFB0CDF00E5F7FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FURRExtensionsOSX;
+			productName = FURRExtensionsOSX;
+			productReference = DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DDAE95FB1BFB0CDF00E5F7FA /* FURRExtensionsOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DDAE96071BFB0CDF00E5F7FA /* Build configuration list for PBXNativeTarget "FURRExtensionsOSXTests" */;
+			buildPhases = (
+				DDAE95F81BFB0CDF00E5F7FA /* Sources */,
+				DDAE95F91BFB0CDF00E5F7FA /* Frameworks */,
+				DDAE95FA1BFB0CDF00E5F7FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDAE95FF1BFB0CDF00E5F7FA /* PBXTargetDependency */,
+			);
+			name = FURRExtensionsOSXTests;
+			productName = FURRExtensionsOSXTests;
+			productReference = DDAE95FC1BFB0CDF00E5F7FA /* FURRExtensionsOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		5698BA851B8DD347008805E2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Ruotger Deecke";
 				TargetAttributes = {
@@ -161,6 +257,12 @@
 					};
 					5698BA971B8DD347008805E2 = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					DDAE95F21BFB0CDF00E5F7FA = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					DDAE95FB1BFB0CDF00E5F7FA = {
+						CreatedOnToolsVersion = 7.1.1;
 					};
 				};
 			};
@@ -178,6 +280,8 @@
 			targets = (
 				5698BA8D1B8DD347008805E2 /* FURRExtensions */,
 				5698BA971B8DD347008805E2 /* FURRExtensionsTests */,
+				DDAE95F21BFB0CDF00E5F7FA /* FURRExtensionsOSX */,
+				DDAE95FB1BFB0CDF00E5F7FA /* FURRExtensionsOSXTests */,
 			);
 		};
 /* End PBXProject section */
@@ -191,6 +295,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5698BA961B8DD347008805E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAE95F11BFB0CDF00E5F7FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAE95FA1BFB0CDF00E5F7FA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -247,6 +365,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DDAE95EE1BFB0CDF00E5F7FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDAE95F81BFB0CDF00E5F7FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DDAE960A1BFB0D0A00E5F7FA /* Array+FURRExtensions.swift in Sources */,
+				DDAE960B1BFB0D0D00E5F7FA /* FURRExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -254,6 +388,11 @@
 			isa = PBXTargetDependency;
 			target = 5698BA8D1B8DD347008805E2 /* FURRExtensions */;
 			targetProxy = 5698BA9A1B8DD347008805E2 /* PBXContainerItemProxy */;
+		};
+		DDAE95FF1BFB0CDF00E5F7FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DDAE95F21BFB0CDF00E5F7FA /* FURRExtensionsOSX */;
+			targetProxy = DDAE95FE1BFB0CDF00E5F7FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -301,6 +440,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -342,6 +482,7 @@
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -409,6 +550,80 @@
 			};
 			name = Release;
 		};
+		DDAE96051BFB0CDF00E5F7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = FURRExtensionsOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.winkenschuerfel.FURRExtensionsOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		DDAE96061BFB0CDF00E5F7FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = FURRExtensionsOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.winkenschuerfel.FURRExtensionsOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
+		DDAE96081BFB0CDF00E5F7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FURRExtensionsOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.winkenschuerfel.FURRExtensionsOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Debug;
+		};
+		DDAE96091BFB0CDF00E5F7FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FURRExtensionsOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = de.winkenschuerfel.FURRExtensionsOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				VALID_ARCHS = "i386 x86_64";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,6 +650,24 @@
 			buildConfigurations = (
 				5698BAA61B8DD347008805E2 /* Debug */,
 				5698BAA71B8DD347008805E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAE96041BFB0CDF00E5F7FA /* Build configuration list for PBXNativeTarget "FURRExtensionsOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAE96051BFB0CDF00E5F7FA /* Debug */,
+				DDAE96061BFB0CDF00E5F7FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DDAE96071BFB0CDF00E5F7FA /* Build configuration list for PBXNativeTarget "FURRExtensionsOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DDAE96081BFB0CDF00E5F7FA /* Debug */,
+				DDAE96091BFB0CDF00E5F7FA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
