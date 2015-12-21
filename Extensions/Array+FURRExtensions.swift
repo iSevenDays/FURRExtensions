@@ -50,18 +50,18 @@ public extension Array {
             return nil
         }
 
-        return self[inIndex];
+        return self[inIndex]
     }
 
     public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
-        var beforeArray:Array<Element> = Array()
-        var afterArray:Array<Element> = Array()
+        var beforeArray: Array<Element> = Array()
+        var afterArray: Array<Element> = Array()
 
         var hasFound = false
         for element in self {
             if hasFound {
                 afterArray.append(element)
-                continue;
+                continue
             }
 
             hasFound = divisionBlock(inElement: element)
