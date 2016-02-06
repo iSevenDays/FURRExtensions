@@ -79,7 +79,7 @@ public extension Array where Element: Equatable {
     /// Warning this method takes time in the order of O(n^2) for the worst case (no dupes)
     public func containsDuplicates() -> Bool {
         for var i in 0..<self.count-1 {
-            for var j in i+1 ..< self.count { 
+            for var j in i+1 ..< self.count {
                 if self[i] == self[j] {
                     return true
                 }

@@ -228,6 +228,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DDAE96071BFB0CDF00E5F7FA /* Build configuration list for PBXNativeTarget "FURRExtensionsOSXTests" */;
 			buildPhases = (
+				DDB49EE81C65FB9E00E5F7FA /* Run swiftlint */,
 				DDAE95F81BFB0CDF00E5F7FA /* Sources */,
 				DDAE95F91BFB0CDF00E5F7FA /* Frameworks */,
 				DDAE95FA1BFB0CDF00E5F7FA /* Resources */,
@@ -344,6 +345,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "PATH=$PATH:/usr/local/bin\necho $PATH\nif which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed.  Skipping lint.\"\nfi";
+		};
+		DDB49EE81C65FB9E00E5F7FA /* Run swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run swiftlint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint autocorrect; swiftlint\nelse\n    echo \"warning: SwiftLint not installed.  Skipping lint.\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
