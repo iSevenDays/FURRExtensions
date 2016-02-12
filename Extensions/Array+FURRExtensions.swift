@@ -1,3 +1,4 @@
+// swiftlint:disable line_length
 //
 //  Array+FURRExtensions.swift
 //  DBDB
@@ -76,8 +77,10 @@ public extension Array {
 
 public extension Array where Element: Equatable {
 
-    /// Warning this method takes time in the order of O(n^2) for the worst case (no dupes)
+    /// WARNING: this method takes time in the order of O(n^2) for the worst case (no dupes)
+    /// - returns: true if at least two objects are equal (==)
     public func containsDuplicates() -> Bool {
+        // unfortunately I can't have let here...
         for var i in 0..<self.count-1 {
             for var j in i+1 ..< self.count {
                 if self[i] == self[j] {
@@ -93,7 +96,8 @@ public extension Array where Element: Equatable {
 
 public extension Array where Element: Hashable {
     /// This method is potentially faster than containsDuplicates() especially with bigger data sets but
-    /// will also need more memory.
+    /// will also need more memory. Also elements need to conform to Hashable.
+    /// - returns: true if at least two objects are equal (==)
     public func containsDuplicatesFast() -> Bool {
         let set: Set<Element> = Set(self)
         return self.count != set.count
