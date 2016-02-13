@@ -84,9 +84,20 @@ public extension Array where Element: Equatable {
             return false
         }
 
-        // unfortunately I can't have let here...
-        for var i in 0..<self.count-1 {
-            for var j in i+1 ..< self.count {
+        // unfortunately you can't put a "for let" into a "for let"
+        // so this var ... while ... defer stuff is my substitution of the c-style for()
+
+        var i = 0
+        while i < self.count-1 {
+            defer {
+                i += 1
+            }
+
+            var j = i+1
+            while j < self.count {
+                defer {
+                    j += 1
+                }
                 if self[i] == self[j] {
                     return true
                 }
@@ -94,7 +105,6 @@ public extension Array where Element: Equatable {
         }
         return false
     }
-
 
 }
 
