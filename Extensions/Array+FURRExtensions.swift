@@ -80,6 +80,10 @@ public extension Array where Element: Equatable {
     /// WARNING: this method takes time in the order of O(n^2) for the worst case (no dupes)
     /// - returns: true if at least two objects are equal (==)
     public func containsDuplicates() -> Bool {
+        if self.count < 2 {
+            return false
+        }
+
         // unfortunately I can't have let here...
         for var i in 0..<self.count-1 {
             for var j in i+1 ..< self.count {
@@ -99,6 +103,10 @@ public extension Array where Element: Hashable {
     /// will also need more memory. Also elements need to conform to Hashable.
     /// - returns: true if at least two objects are equal (==)
     public func containsDuplicatesFast() -> Bool {
+        if self.count < 2 {
+            return false
+        }
+
         let set: Set<Element> = Set(self)
         return self.count != set.count
     }

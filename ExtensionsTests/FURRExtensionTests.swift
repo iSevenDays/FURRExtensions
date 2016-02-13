@@ -105,5 +105,14 @@ class ExtensionTests: XCTestCase {
         XCTAssert(["a","b","c","c"].containsDuplicatesFast() == true)
     }
 
+    func testEmptyArrayEdgeCasesHaveNoDupes() {
+        let empty: Array<String> = []
+        XCTAssert(empty.containsDuplicates() == false)
+        XCTAssert(empty.containsDuplicatesFast() == false)
+
+        XCTAssert(["a"].containsDuplicates() == false)
+        XCTAssert(["a"].containsDuplicatesFast() == false)
+
+    }
 
 }
