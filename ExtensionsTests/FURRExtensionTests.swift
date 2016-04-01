@@ -40,13 +40,13 @@ class ExtensionTests: XCTestCase {
     }
 
     func testArrayReverse() {
-        let array = ["a","b","c","d"]
+        let array = ["a", "b", "c", "d"]
         let reversed = array.reversed()
-        XCTAssert(reversed == ["d","c","b","a"])
+        XCTAssert(reversed == ["d", "c", "b", "a"])
     }
 
     func testOptionalElement() {
-        let array = ["a","b","c","d"]
+        let array = ["a", "b", "c", "d"]
         XCTAssert(array.optionalElementAtIndex(0) != nil)
         XCTAssert(array.optionalElementAtIndex(-1) == nil)
         XCTAssert(array.optionalElementAtIndex(3) != nil)
@@ -54,55 +54,55 @@ class ExtensionTests: XCTestCase {
     }
 
     func testDivideUntilMiddle() {
-        let array = ["a","b","c","d","e"]
+        let array = ["a", "b", "c", "d", "e"]
         let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "c"
         }
 
-        XCTAssert(before == ["a","b"])
-        XCTAssert(after == ["d","e"])
+        XCTAssert(before == ["a", "b"])
+        XCTAssert(after == ["d", "e"])
     }
 
     func testDivideUntilFirst() {
-        let array = ["a","b","c","d","e"]
+        let array = ["a", "b", "c", "d", "e"]
         let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "a"
         }
 
         XCTAssert(before == [])
-        XCTAssert(after == ["b","c","d","e"])
+        XCTAssert(after == ["b", "c", "d", "e"])
     }
 
     func testDivideUntilLast() {
-        let array = ["a","b","c","d","e"]
+        let array = ["a", "b", "c", "d", "e"]
         let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "e"
         }
 
-        XCTAssert(before == ["a","b","c","d"])
+        XCTAssert(before == ["a", "b", "c", "d"])
         XCTAssert(after == [])
     }
 
     func testDivideUntilWithout() {
-        let array = ["a","b","c","d","e"]
+        let array = ["a", "b", "c", "d", "e"]
         let (before, after) = array.divideUntil { (inElement) -> Bool in
             inElement == "f"
         }
 
-        XCTAssert(before == ["a","b","c","d","e"])
+        XCTAssert(before == ["a", "b", "c", "d", "e"])
         XCTAssert(after == [])
     }
 
     func testContainsDupes() {
-        XCTAssert(["a","a"].containsDuplicates() == true)
-        XCTAssert(["a","b","c"].containsDuplicates() == false)
-        XCTAssert(["a","b","c","c"].containsDuplicates() == true)
+        XCTAssert(["a", "a"].containsDuplicates() == true)
+        XCTAssert(["a", "b", "c"].containsDuplicates() == false)
+        XCTAssert(["a", "b", "c", "c"].containsDuplicates() == true)
     }
 
     func testContainsDupesFast() {
-        XCTAssert(["a","a"].containsDuplicatesFast() == true)
-        XCTAssert(["a","b","c"].containsDuplicatesFast() == false)
-        XCTAssert(["a","b","c","c"].containsDuplicatesFast() == true)
+        XCTAssert(["a", "a"].containsDuplicatesFast() == true)
+        XCTAssert(["a", "b", "c"].containsDuplicatesFast() == false)
+        XCTAssert(["a", "b", "c", "c"].containsDuplicatesFast() == true)
     }
 
     func testEmptyArrayEdgeCasesHaveNoDupes() {
