@@ -13,6 +13,7 @@
 		5698BAAC1B8DD3DE008805E2 /* FURRExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */; };
 		5698BAAD1B8DD3F9008805E2 /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
 		DD6657D11BCC0CA600E5F7FA /* Array+FURRExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDA97A611CCB84F400E5F7FA /* FURRResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97A601CCB84F400E5F7FA /* FURRResult.swift */; };
 		DDAE95F61BFB0CDF00E5F7FA /* FURRExtensionsOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAE95F51BFB0CDF00E5F7FA /* FURRExtensionsOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDAE95FD1BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */; };
 		DDAE960A1BFB0D0A00E5F7FA /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
@@ -45,6 +46,7 @@
 		5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+FURRExtensions.swift"; sourceTree = "<group>"; };
 		5698BAAA1B8DD3DD008805E2 /* ExtensionsTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExtensionsTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FURRExtensionTests.swift; sourceTree = "<group>"; };
+		DDA97A601CCB84F400E5F7FA /* FURRResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FURRResult.swift; sourceTree = "<group>"; };
 		DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FURRExtensionsOSX.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDAE95F51BFB0CDF00E5F7FA /* FURRExtensionsOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FURRExtensionsOSX.h; sourceTree = "<group>"; };
 		DDAE95F71BFB0CDF00E5F7FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		5698BA901B8DD347008805E2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				DDA97A601CCB84F400E5F7FA /* FURRResult.swift */,
 				5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */,
 				5698BA911B8DD347008805E2 /* FURRExtensions.h */,
 				5698BA931B8DD347008805E2 /* Info.plist */,
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5698BAA91B8DD3C5008805E2 /* Array+FURRExtensions.swift in Sources */,
+				DDA97A611CCB84F400E5F7FA /* FURRResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
