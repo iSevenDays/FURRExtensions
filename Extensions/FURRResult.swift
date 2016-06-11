@@ -27,8 +27,15 @@
 
 import Foundation
 
+#if swift(>=3.0)
+    typealias ErrorReturnValue = ErrorProtocol
+#else
+    typealias ErrorReturnValue = ErrorType
+
+#endif
+
 enum FURRResult<T> {
 
     case Success(T)
-    case Failure(ErrorType)
+    case Failure(ErrorReturnValue)
 }
