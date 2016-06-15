@@ -42,16 +42,16 @@ public extension Array {
         return result
     }
 
-    public func optionalElementAtIndex(inIndex: Int) -> Element? {
-        if inIndex < 0 {
+    public func optionalElement(index: Int) -> Element? {
+        if index < 0 {
             return nil
         }
 
-        if inIndex >= self.count {
+        if index >= self.count {
             return nil
         }
 
-        return self[inIndex]
+        return self[index]
     }
 
     public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {

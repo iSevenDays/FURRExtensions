@@ -253,7 +253,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Ruotger Deecke";
 				TargetAttributes = {
 					5698BA8D1B8DD347008805E2 = {
@@ -459,6 +459,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALID_ARCHS = "arm64 armv7 armv7s";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -501,6 +502,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -543,6 +545,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuotgerSkupin.FURRExtensions;
 				PRODUCT_NAME = FURRExtensions;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -568,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuotgerSkupin.ExtensionsTests;
 				PRODUCT_NAME = FURRExtensions;
 				SWIFT_OBJC_BRIDGING_HEADER = "ExtensionsTests/ExtensionsTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -641,6 +645,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.winkenschuerfel.FURRExtensionsOSXTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALID_ARCHS = "i386 x86_64";
 			};
 			name = Release;

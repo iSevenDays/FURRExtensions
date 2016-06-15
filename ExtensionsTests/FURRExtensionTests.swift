@@ -47,10 +47,17 @@ class ExtensionTests: XCTestCase {
 
     func testOptionalElement() {
         let array = ["a", "b", "c", "d"]
-        XCTAssert(array.optionalElementAtIndex(0) != nil)
-        XCTAssert(array.optionalElementAtIndex(-1) == nil)
-        XCTAssert(array.optionalElementAtIndex(3) != nil)
-        XCTAssert(array.optionalElementAtIndex(4) == nil)
+    #if swift(>=3.0)
+        XCTAssert(array.optionalElement(index: 0) != nil)
+        XCTAssert(array.optionalElement(index: -1) == nil)
+        XCTAssert(array.optionalElement(index: 3) != nil)
+        XCTAssert(array.optionalElement(index: 4) == nil)
+    #else
+        XCTAssert(array.optionalElement(0) != nil)
+        XCTAssert(array.optionalElement(-1) == nil)
+        XCTAssert(array.optionalElement(3) != nil)
+        XCTAssert(array.optionalElement(4) == nil)
+    #endif
     }
 
     func testDivideUntilMiddle() {
