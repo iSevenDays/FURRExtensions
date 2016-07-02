@@ -53,10 +53,10 @@ class ExtensionTests: XCTestCase {
         XCTAssert(array.optionalElement(index: 3) != nil)
         XCTAssert(array.optionalElement(index: 4) == nil)
     #else
-        XCTAssert(array.optionalElement(0) != nil)
-        XCTAssert(array.optionalElement(-1) == nil)
-        XCTAssert(array.optionalElement(3) != nil)
-        XCTAssert(array.optionalElement(4) == nil)
+        XCTAssert(array.optionalElement(index: 0) != nil)
+        XCTAssert(array.optionalElement(index: -1) == nil)
+        XCTAssert(array.optionalElement(index: 3) != nil)
+        XCTAssert(array.optionalElement(index: 4) == nil)
     #endif
     }
 

@@ -42,7 +42,25 @@ public extension Array {
         return result
     }
 
-    public func optionalElement(index: Int) -> Element? {
+    // this is an ugly dance, but hey, what can you do...?
+    #if swift(>=3.0)
+        public func optionalElement(index: Int) -> Element? {
+            return private_optionalElement(index: index)
+        }
+    #else
+        public func optionalElement(index index: Int) -> Element? {
+            return private_optionalElement(index)
+        }
+
+        // this really legacy...
+        @available(*, deprecated, renamed="optionalElement(index:)")
+
+        public func optionalElementAtIndex(index: Int) -> Element? {
+            return private_optionalElement(index)
+        }
+    #endif
+
+    private func private_optionalElement(index: Int) -> Element? {
         if index < 0 {
             return nil
         }
@@ -54,7 +72,17 @@ public extension Array {
         return self[index]
     }
 
+    #if swift(>=3.0)
+    public func divideUntil(_ divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
+        return private_divideUntil(divisionBlock: divisionBlock)
+    }
+    #else
     public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
+        return private_divideUntil(divisionBlock)
+    }
+    #endif
+
+    private func private_divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
         var beforeArray: Array<Element> = Array()
         var afterArray: Array<Element> = Array()
 
