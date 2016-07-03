@@ -9,4 +9,3 @@
 import PackageDescription
 
 let package = Package(name: "FURRExtensions", targets: [ Target(name: "Extensions")])
-
