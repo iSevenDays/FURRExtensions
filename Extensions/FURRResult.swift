@@ -28,7 +28,7 @@
 import Foundation
 
 #if swift(>=3.0)
-    typealias ErrorReturnValue = ErrorProtocol
+    typealias ErrorReturnValue = Error
 #else
     typealias ErrorReturnValue = ErrorType
 
