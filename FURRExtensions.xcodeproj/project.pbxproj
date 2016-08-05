@@ -11,12 +11,10 @@
 		5698BA991B8DD347008805E2 /* FURRExtensions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5698BA8E1B8DD347008805E2 /* FURRExtensions.framework */; };
 		5698BAA91B8DD3C5008805E2 /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
 		5698BAAC1B8DD3DE008805E2 /* FURRExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */; };
-		5698BAAD1B8DD3F9008805E2 /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
 		DD6657D11BCC0CA600E5F7FA /* Array+FURRExtensions.swift in Headers */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDA97A611CCB84F400E5F7FA /* FURRResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA97A601CCB84F400E5F7FA /* FURRResult.swift */; };
 		DDAE95F61BFB0CDF00E5F7FA /* FURRExtensionsOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = DDAE95F51BFB0CDF00E5F7FA /* FURRExtensionsOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DDAE95FD1BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDAE95F31BFB0CDF00E5F7FA /* FURRExtensionsOSX.framework */; };
-		DDAE960A1BFB0D0A00E5F7FA /* Array+FURRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAA81B8DD3C5008805E2 /* Array+FURRExtensions.swift */; };
 		DDAE960B1BFB0D0D00E5F7FA /* FURRExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5698BAAB1B8DD3DE008805E2 /* FURRExtensionTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -382,7 +380,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5698BAAC1B8DD3DE008805E2 /* FURRExtensionTests.swift in Sources */,
-				5698BAAD1B8DD3F9008805E2 /* Array+FURRExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +394,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDAE960A1BFB0D0A00E5F7FA /* Array+FURRExtensions.swift in Sources */,
 				DDAE960B1BFB0D0D00E5F7FA /* FURRExtensionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -580,6 +576,7 @@
 				INFOPLIST_FILE = ExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuotgerSkupin.ExtensionsTests;
+				PRODUCT_MODULE_NAME = FURRExtensionsTests;
 				PRODUCT_NAME = FURRExtensions;
 				SWIFT_OBJC_BRIDGING_HEADER = "ExtensionsTests/ExtensionsTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -593,6 +590,7 @@
 				INFOPLIST_FILE = ExtensionsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.RuotgerSkupin.ExtensionsTests;
+				PRODUCT_MODULE_NAME = FURRExtensionsTests;
 				PRODUCT_NAME = FURRExtensions;
 				SWIFT_OBJC_BRIDGING_HEADER = "ExtensionsTests/ExtensionsTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
