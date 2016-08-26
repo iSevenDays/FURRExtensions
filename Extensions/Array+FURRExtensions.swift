@@ -73,7 +73,7 @@ public extension Array {
     }
 
     #if swift(>=3.0)
-    public func divideUntil(_ divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
+    public func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> (Array<Element>, Array<Element>) {
         return private_divideUntil(divisionBlock: divisionBlock)
     }
     #else
@@ -82,7 +82,7 @@ public extension Array {
     }
     #endif
 
-    private func private_divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
+    private func private_divideUntil(divisionBlock: (_: Element) -> Bool) -> (Array<Element>, Array<Element>) {
         var beforeArray: Array<Element> = Array()
         var afterArray: Array<Element> = Array()
 
@@ -93,7 +93,7 @@ public extension Array {
                 continue
             }
 
-            hasFound = divisionBlock(inElement: element)
+            hasFound = divisionBlock(_: element)
 
             if !hasFound {
                 beforeArray.append(element)
