@@ -25,12 +25,11 @@
 // WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-
 import Foundation
 
 public extension Array {
 
-    public func reversed() -> Array<Element> {
+    public func reversed() -> [Element] {
         var result: [Element] = Array()
         var mutSelf: [Element] = self
         while mutSelf.count != 0 {
@@ -73,18 +72,18 @@ public extension Array {
     }
 
     #if swift(>=3.0)
-    public func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> (Array<Element>, Array<Element>) {
+    public func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
         return private_divideUntil(divisionBlock: divisionBlock)
     }
     #else
-    public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> (Array<Element>, Array<Element>) {
+    public func divideUntil(divisionBlock: (inElement: Element) -> Bool) -> ([Element], [Element]) {
         return private_divideUntil(divisionBlock)
     }
     #endif
 
-    private func private_divideUntil(divisionBlock: (_: Element) -> Bool) -> (Array<Element>, Array<Element>) {
-        var beforeArray: Array<Element> = Array()
-        var afterArray: Array<Element> = Array()
+    private func private_divideUntil(divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
+        var beforeArray: [Element] = Array()
+        var afterArray: [Element] = Array()
 
         var hasFound = false
         for element in self {

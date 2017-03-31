@@ -29,13 +29,18 @@ import Foundation
 
 #if swift(>=3.0)
     typealias ErrorReturnValue = Error
+
+    enum FURRResult<T> {
+
+        case success(T)
+        case failure(ErrorReturnValue)
+    }
 #else
     typealias ErrorReturnValue = ErrorType
 
+    enum FURRResult<T> {
+
+        case Success(T)
+        case Failure(ErrorReturnValue)
+    }
 #endif
-
-enum FURRResult<T> {
-
-    case Success(T)
-    case Failure(ErrorReturnValue)
-}
