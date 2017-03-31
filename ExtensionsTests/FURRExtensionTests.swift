@@ -48,17 +48,10 @@ class ExtensionTests: XCTestCase {
 
     func testOptionalElement() {
         let array = ["a", "b", "c", "d"]
-    #if swift(>=3.0)
         XCTAssert(array.optionalElement(index: 0) != nil)
         XCTAssert(array.optionalElement(index: -1) == nil)
         XCTAssert(array.optionalElement(index: 3) != nil)
         XCTAssert(array.optionalElement(index: 4) == nil)
-    #else
-        XCTAssert(array.optionalElement(index: 0) != nil)
-        XCTAssert(array.optionalElement(index: -1) == nil)
-        XCTAssert(array.optionalElement(index: 3) != nil)
-        XCTAssert(array.optionalElement(index: 4) == nil)
-    #endif
     }
 
     func testDivideUntilMiddle() {
@@ -120,7 +113,7 @@ class ExtensionTests: XCTestCase {
 
         XCTAssert(["a"].containsDuplicates() == false)
         XCTAssert(["a"].containsDuplicatesFast() == false)
-
+        
     }
-
+    
 }
