@@ -124,7 +124,7 @@ public extension Array where Element: Hashable {
         if self.count < 2 {
             return false
         }
-        
+
         let set: Set<Element> = Set(self)
         return self.count != set.count
     }

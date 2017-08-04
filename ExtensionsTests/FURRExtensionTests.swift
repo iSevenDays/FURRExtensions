@@ -113,7 +113,7 @@ class ExtensionTests: XCTestCase {
 
         XCTAssert(["a"].containsDuplicates() == false)
         XCTAssert(["a"].containsDuplicatesFast() == false)
-        
+
     }
-    
+
 }
