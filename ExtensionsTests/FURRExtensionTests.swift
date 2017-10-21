@@ -51,6 +51,13 @@ class ExtensionTests: XCTestCase {
         XCTAssert(array.optionalElement(index: -1) == nil)
         XCTAssert(array.optionalElement(index: 3) != nil)
         XCTAssert(array.optionalElement(index: 4) == nil)
+        XCTAssertNil(array.optionalElement(index: nil))
+
+        XCTAssertNotNil(array[safe: 0])
+        XCTAssertNotNil(array[safe: 3])
+        XCTAssertNil(array[safe: -1])
+        XCTAssertNil(array[safe: 4])
+        XCTAssertNil(array[safe: nil])
     }
 
     func testDivideUntilMiddle() {

@@ -40,12 +40,9 @@ public extension Array {
         return result
     }
 
-    // this is an ugly dance, but hey, what can you do...?
-    public func optionalElement(index: Int) -> Element? {
-        return private_optionalElement(index: index)
-    }
+    public func optionalElement(index: Int?) -> Element? {
+        guard let index = index else { return nil }
 
-    private func private_optionalElement(index: Int) -> Element? {
         if index < 0 {
             return nil
         }
@@ -57,11 +54,11 @@ public extension Array {
         return self[index]
     }
 
-    public func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
-        return private_divideUntil(divisionBlock: divisionBlock)
+    subscript(safe index: Int?) -> Element? {
+        return optionalElement(index: index)
     }
 
-    private func private_divideUntil(divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
+    public func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
         var beforeArray: [Element] = Array()
         var afterArray: [Element] = Array()
 
