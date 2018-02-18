@@ -77,7 +77,8 @@ public extension Array {
         }
 
         return (beforeArray, afterArray)
-    }   }
+    }
+}
 
 public extension Array where Element: Equatable {
 
