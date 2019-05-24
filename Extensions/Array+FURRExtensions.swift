@@ -28,7 +28,7 @@ import Foundation
 
 public extension Array {
 
-    public func reversed() -> [Element] {
+    func reversed() -> [Element] {
         var result: [Element] = Array()
         var mutSelf: [Element] = self
         while mutSelf.count != 0 {
@@ -40,7 +40,7 @@ public extension Array {
         return result
     }
 
-    public func optionalElement(index: Int?) -> Element? {
+    func optionalElement(index: Int?) -> Element? {
         guard let index = index else { return nil }
 
         if index < 0 {
@@ -58,7 +58,7 @@ public extension Array {
         return optionalElement(index: index)
     }
 
-    public func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
+    func divideUntil(_ divisionBlock: (_: Element) -> Bool) -> ([Element], [Element]) {
         var beforeArray: [Element] = Array()
         var afterArray: [Element] = Array()
 
@@ -84,7 +84,7 @@ public extension Array where Element: Equatable {
 
     /// WARNING: this method takes time in the order of O(n^2) for the worst case (no dupes)
     /// - returns: true if at least two objects are equal (==)
-    public func containsDuplicates() -> Bool {
+    func containsDuplicates() -> Bool {
         if self.count < 2 {
             return false
         }
@@ -117,7 +117,7 @@ public extension Array where Element: Hashable {
     /// This method is potentially faster than containsDuplicates() especially with bigger data sets but
     /// will also need more memory. Also elements need to conform to Hashable.
     /// - returns: true if at least two objects are equal (==)
-    public func containsDuplicatesFast() -> Bool {
+    func containsDuplicatesFast() -> Bool {
         if self.count < 2 {
             return false
         }
