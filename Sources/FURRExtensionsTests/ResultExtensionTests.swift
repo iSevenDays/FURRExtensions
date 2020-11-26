@@ -32,6 +32,7 @@ enum MockError: Error {
 }
 
 typealias MockResult = Result<Int, MockError>
+typealias MockArrayResult = Result<[Int], MockError>
 
 class ResultExtensionTests: XCTestCase {
 
@@ -43,6 +44,9 @@ class ResultExtensionTests: XCTestCase {
         XCTAssert(result.isSuccess)
         XCTAssertEqual(result.successObject(), 1)
         XCTAssertNil(result.failureObject())
+
+        XCTAssertSuccess(result)
+        XCTAssertSuccessResultEqual(result, 1)
     }
 
     func testFailure() {
@@ -53,7 +57,40 @@ class ResultExtensionTests: XCTestCase {
         XCTAssert(!result.isSuccess)
         XCTAssertEqual(result.failureObject(), .mockError)
         XCTAssertNil(result.successObject())
+
+        XCTAssertFailure(result)
+        XCTAssertFailureResultEqual(result, .mockError)
     }
 
-    
+    func testArrayOfSuccesses() {
+        // given
+        let results = [MockResult.success(1), MockResult.success(2), MockResult.success(3)]
+
+        // then
+        XCTAssertSuccessResultEqual(results, [1,2,3])
+    }
+
+    func testArrayOfFailures() {
+        // given
+        let results = [MockResult.failure(.mockError),MockResult.failure(.mockError)]
+
+        // then
+        XCTAssertFailureResultEqual(results, [.mockError, .mockError])
+    }
+
+    func testSuccessArray() {
+        // given
+        let result = MockArrayResult.success([1,2,3])
+
+        // then
+        XCTAssertSuccessResultEqual(result, [1,2,3])
+    }
+
+    func testArrayFailure() {
+        // given
+        let result = MockArrayResult.failure(.mockError)
+
+        // then
+        XCTAssertFailureResultEqual(result, .mockError)
+    }
 }
