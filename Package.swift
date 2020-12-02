@@ -27,7 +27,7 @@ let package = Package(
             dependencies: []),
         .target(
             name: "FURRTestExtensions",
-            dependencies: []),
+            dependencies: ["FURRExtensions"]),
         .testTarget(
             name: "FURRExtensionsTests",
             dependencies: ["FURRExtensions", "FURRTestExtensions"]),
