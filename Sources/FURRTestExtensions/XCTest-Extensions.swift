@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FURRExtensions
 import XCTest
 
 public func XCTAssertSuccess<Success,Failure>(_ expression: @autoclosure () throws -> Result<Success,Failure>, _ message: @autoclosure () -> String = "", file: StaticString = #filePath, line: UInt = #line) {

@@ -11,6 +11,9 @@ let package = Package(
         .library(
             name: "FURRExtensions",
             targets: ["FURRExtensions"]),
+        .library(
+            name: "FURRTestExtensions",
+            targets: ["FURRTestExtensions"]),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,8 +25,11 @@ let package = Package(
         .target(
             name: "FURRExtensions",
             dependencies: []),
+        .target(
+            name: "FURRTestExtensions",
+            dependencies: []),
         .testTarget(
             name: "FURRExtensionsTests",
-            dependencies: ["FURRExtensions"]),
+            dependencies: ["FURRExtensions", "FURRTestExtensions"]),
     ]
 )
